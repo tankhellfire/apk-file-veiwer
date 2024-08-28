@@ -3,21 +3,13 @@
     "dockerFile": "Dockerfile",
     "customizations": {
         "vscode": {
-            "settings": {
-                "terminal.integrated.shell.linux": "/bin/bash",
-                "java.home": "/usr/lib/jvm/java-11-openjdk-amd64"
-            },
             "extensions": [
                 "vscjava.vscode-java-pack",
                 "redhat.java",
-                "vscjava.vscode-gradle",
-                "vscjava.vscode-maven",
-                "mhutchie.git-graph",
-                "eamodio.gitlens"
+                "vscjava.vscode-gradle"
             ]
         }
     },
     "forwardPorts": [8080],
-    "postCreateCommand": "sdk install java 11.0.12-open && sdk use java 11.0.12-open && yes | sdkmanager --licenses && sdkmanager \"platform-tools\" \"platforms;android-30\" \"build-tools;30.0.3\"",
     "remoteUser": "vscode"
 }
